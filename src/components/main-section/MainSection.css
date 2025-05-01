@@ -1,0 +1,112 @@
+/* src/components/MainSection.css */
+
+:root {
+  --primary-color: #003366;
+  --accent-color: #00b4d8;
+  --background-light: #f9f9f9;
+  --text-color: #333;
+  --placeholder-bg: #fff3cd;
+  --placeholder-border: #ffc107;
+}
+
+.main-container {
+  padding-top: 100px; /* Height of navbar */
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 60px;
+  background: var(--background-light);
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-color);
+}
+
+/* Section Defaults */
+section {
+  margin-bottom: 3rem;
+}
+
+/* Home / Intro Section */
+.intro-section {
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 51, 102, 0.1);
+}
+
+.intro-section h1 {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* About Us Section */
+.about-us-section {
+  background: #ffffff;
+  border-left: 6px solid var(--accent-color);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.about-us-section h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.about-us-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.placeholder-section {
+  background-color: #6285b2; /* Deep navy blue */
+  border-left: 6px solid #00b4d8; /* Bright cyan border */
+  color: #f1f1f158;
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.placeholder-section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 180, 216, 0.5);
+}
+
+.placeholder-section h3 {
+  font-size: 1.7rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.placeholder-section p {
+  font-size: 1.05rem;
+  color: #dbe9f4;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 80px 2rem;
+  }
+
+  .intro-section h1,
+  .about-us-section h2,
+  .placeholder-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .intro-section p,
+  .about-us-section p,
+  .placeholder-section p {
+    font-size: 0.95rem;
+  }
+}
