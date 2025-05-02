@@ -6,7 +6,7 @@ const MainSection = () => {
     <div className="main-container">
       {/* Home Section */}
       <section id="home" className="intro-section">
-        <h1>Welcome to the CSBS Department Magazine Committee</h1>
+        <h1>Welcome to the Magazine Content Upload Portal</h1>
         <p>
           This is the official magazine platform of the Department of Computer Science and Business Systems (CSBS).
           It serves as a centralized space where students and faculty can upload technical articles, event highlights,
@@ -15,8 +15,23 @@ const MainSection = () => {
         </p>
       </section>
 
-      {/* About Us Section */}
-      <section id="about-us" className="about-us-section">
+
+      {/* Placeholder Sections */}
+      <div id="upload-article" className="placeholder-section animated-section">
+        <h3>📝 Upload Article</h3>
+        <p>Coming Soon: Submission Form for Textual Content - Articles, poems, personal perspectives, and more!</p>
+      </div>
+      <div id="upload-photo" className="placeholder-section animated-section">
+        <h3>🖼️ Upload Photo</h3>
+        <p>Coming Soon: Upload event photos, artwork and visual content and more!</p>
+      </div>
+      <div id="suggestions" className="placeholder-section animated-section">
+        <h3>💡 Suggestions</h3>
+        <p>Coming soon: Share your ideas to improve the magazine.</p>
+      </div>
+
+        {/* About Us Section */}
+        <section id="about-us" className="about-us-section">
         <h2>About Us</h2>
         <p>
           The CSBS Department Magazine Committee is dedicated to offering a platform where students and faculty
@@ -28,21 +43,6 @@ const MainSection = () => {
           Every submission is reviewed to ensure quality and presentation.
         </p>
       </section>
-
-
-      {/* Placeholder Sections */}
-      <div id="upload-article" className="placeholder-section">
-        <h3>Upload Article</h3>
-        <p>Coming soon: Form to submit written content.</p>
-      </div>
-      <div id="upload-photo" className="placeholder-section">
-        <h3>Upload Photo</h3>
-        <p>Coming soon: Upload photos from departmental events.</p>
-      </div>
-      <div id="suggestions" className="placeholder-section">
-        <h3>Suggestions</h3>
-        <p>Coming soon: Share your ideas to improve the magazine.</p>
-      </div>
 
       {/* Contact Us Section */}
       <section id="contact-us" className="about-us-section">

@@ -3,7 +3,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 97%;
+  height: 5%;
   z-index: 1000; /* Ensures it stays above other elements */
   display: flex;
   justify-content: space-between;
@@ -12,6 +13,9 @@
   background-color: #003366;
   color: white;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  user-select: none;
+
 }
 
 .logo {
@@ -32,4 +36,23 @@
 
 .nav-links a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .navbar{
+    width: 97%;
+    height: 10%;
+    align-items: center;
+    padding: 1rem 4px 0px 0.5rem;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    padding-right: 1rem;
+  }
 }

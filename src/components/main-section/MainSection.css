@@ -65,31 +65,111 @@ section {
 }
 
 .placeholder-section {
-  background-color: #6285b2; /* Deep navy blue */
-  border-left: 6px solid #00b4d8; /* Bright cyan border */
-  color: #f1f1f158;
+  background: linear-gradient(-45deg, #003366, #005f73, #0077b6, #003366);
+  background-size: 400% 400%;
+  animation: animatedGradient 8s ease infinite, pulseGlow 4s ease-in-out infinite;
+
+  border-left: 6px solid var(--accent-color);
+  color: #f1f1f1;
   padding: 2rem;
   margin-bottom: 2.5rem;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  user-select: none;
 }
 
 .placeholder-section:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 180, 216, 0.5);
+  box-shadow: 0 8px 20px rgba(0, 8, 10, 0.5);
+  cursor: pointer;  
 }
 
-.placeholder-section h3 {
-  font-size: 1.7rem;
-  color: #ffffff;
-  margin-bottom: 0.8rem;
+
+.placeholder-section h3{
+  font-size: 2rem;
 }
 
 .placeholder-section p {
-  font-size: 1.05rem;
   color: #dbe9f4;
+  animation: textColorPulse 3s infinite ease-in-out;
+  font-size: 1.3rem;
 }
+
+.placeholder-section p {
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+  position: relative;
+  display: inline-block;
+  animation: textColorPulse 3s infinite ease-in-out;
+}
+
+.placeholder-section p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.placeholder-section p:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes textColorPulse {
+  0% {
+    color: #ffffff;
+  }
+  50% {
+    color: grey;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+
+
+/* Keyframes for background gradient animation */
+@keyframes animatedGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Keyframes for pulse glow */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 180, 216, 0.6);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
+    transform: scale(1);
+  }
+}
+
+
+/* Add animation class */
+.placeholder-section {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
 
 
 /* Responsive Design */
